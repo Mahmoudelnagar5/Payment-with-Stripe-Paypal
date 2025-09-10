@@ -1,0 +1,28 @@
+# Make GitHub Linguist prioritize Dart by excluding generated/vendor code from stats
+
+# Flutter/Tooling generated outputs
+build/** linguist-generated=true
+**/build/** linguist-generated=true
+dart_tool/** linguist-generated=true
+**/coverage/** linguist-generated=true
+
+# Platform boilerplate (not primary source for Flutter app logic)
+android/** linguist-vendored
+ios/** linguist-vendored
+linux/** linguist-vendored
+macos/** linguist-vendored
+windows/** linguist-vendored
+
+# Flutter web shell and static assets
+web/** linguist-vendored
+assets/** linguist-vendored
+
+# Common Dart generated files
+*.g.dart linguist-generated=true
+*.freezed.dart linguist-generated=true
+*.gen.dart linguist-generated=true
+
+# Keep Dart in `lib/` fully counted
+lib/** linguist-detectable=true
+
+
