@@ -8,18 +8,6 @@
 
 A modern, secure, and user-friendly Flutter application for handling checkout and payment processing integrations with Stripe and PayPal.
 
-## 📋 Table of Contents
-
-- [🚀 Features](#features)
-- [🛠️ Technologies Used](#technologies-used)
-- [🏗️ Architecture](#architecture)
-- [📦 Installation](#installation)
-- [⚙️ Configuration](#configuration)
-- [📱 Usage](#usage)
-- [📁 Project Structure](#project-structure)
-- [🧪 Testing](#testing)
-- [🤝 Contributing](#contributing)
-- [📄 License](#license)
 
 ## 🚀 Features
 
@@ -143,74 +131,7 @@ lib/
 - Chrome browser for development
 - Run `flutter run -d chrome`
 
-## ⚙️ Configuration
 
-### API Keys Setup
-
-⚠️ **Important**: Never commit real API keys to version control. Use environment variables or secure configuration management.
-
-#### Stripe Configuration
-
-1. Create a `.env` file in the project root:
-   ```env
-   STRIPE_PUBLISHABLE_KEY=pk_test_your_publishable_key_here
-   STRIPE_SECRET_KEY=sk_test_your_secret_key_here
-   ```
-
-2. Update `lib/core/utils/api_keys.dart`:
-   ```dart
-   class ApiKeys {
-     static const String publishableKey = String.fromEnvironment(
-       'STRIPE_PUBLISHABLE_KEY',
-       defaultValue: 'pk_test_your_publishable_key_here',
-     );
-
-     static const String secretKey = String.fromEnvironment(
-       'STRIPE_SECRET_KEY',
-       defaultValue: 'sk_test_your_secret_key_here',
-     );
-   }
-   ```
-
-3. Update pubspec.yaml to handle environment variables:
-   ```yaml
-   dependencies:
-     flutter_dotenv: ^5.1.0
-
-   flutter:
-     assets:
-       - .env
-   ```
-
-#### PayPal Configuration
-
-Update the PayPal keys in `lib/core/utils/api_keys.dart`:
-
-```dart
-class ApiKeys {
-  // ... existing keys
-
-  static const String paypalClientId = String.fromEnvironment(
-    'PAYPAL_CLIENT_ID',
-    defaultValue: 'your_paypal_client_id_here',
-  );
-
-  static const String paypalSecretKey = String.fromEnvironment(
-    'PAYPAL_SECRET_KEY',
-    defaultValue: 'your_paypal_secret_key_here',
-  );
-}
-```
-
-### Environment Variables Setup
-
-Add to your `.env` file:
-```env
-PAYPAL_CLIENT_ID=your_paypal_client_id
-PAYPAL_SECRET_KEY=your_paypal_secret_key
-STRIPE_PUBLISHABLE_KEY=pk_test_your_key
-STRIPE_SECRET_KEY=sk_test_your_key
-```
 
 ## 📱 Usage
 
@@ -266,13 +187,6 @@ Navigator.push(
 );
 ```
 
-### Screenshots
-
-| My Cart Screen | Payment Details | Thank You Page |
-|---|---|---|
-| ![My Cart](screenshots/cart_screen.png) | ![Payment Details](screenshots/payment_screen.png) | ![Thank You](screenshots/thank_you_screen.png) |
-
-*Add screenshots to `screenshots/` directory to display them properly*
 
 ## 📁 Project Structure
 
