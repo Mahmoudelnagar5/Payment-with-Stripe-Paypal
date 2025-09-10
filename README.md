@@ -303,18 +303,6 @@ This project uses [Conventional Commits](https://conventionalcommits.org/):
 - Provide screenshots for UI-related issues
 - Suggest improvements with detailed descriptions
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### Third-Party Licenses
-
-This application uses the following third-party services:
-
-- **Stripe Payment Processing** - Subject to Stripe's Terms of Service
-- **PayPal Payment Processing** - Subject to PayPal's Terms of Service
-
----
 
 **Built with ❤️ using Flutter**
 
